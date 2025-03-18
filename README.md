@@ -1,6 +1,7 @@
 # SecOps
 ### Introduction to Backstory
-- Link: https://medium.com/chronicle-blog/introducing-backstory-45dd9b4d4a6d  
+- Link: https://medium.com/chronicle-blog/introducing-backstory-45dd9b4d4a6d
+- To check project ID: `gcloud config list project` (on gcloud console)
 ### Create Web and Mobile Apps - Chronicle Demo
 ![{14F1AD88-9810-450E-AA47-2AE5FC8447CF}](https://github.com/user-attachments/assets/2f4b9615-51a2-4d33-85f4-310f5de20505)
 
