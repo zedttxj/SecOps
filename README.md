@@ -1,27 +1,8 @@
 # SecOps
 ### Disable Key Creation Policy in Organization Level
-```
-anhminh_nguyen@cloudshell:~ (liquid-fort-453121-g5)$ history
-    1  gcloud auth login
-    2  gcloud iam service-accounts keys create key-file.json   --iam-account chronicle-api-service-account@liquid-fort-453121-g5.iam.gserviceaccount.com
-    3  gcloud org-policies list --filter="constraint=constraints/iam.managed.disableServiceAccountKeyCreation"
-    4  gcloud org-policies describe constraints/iam.managed.disableServiceAccountKeyCreation --effective
-    5  gcloud org-policies list --filter="constraint=constraints/iam.managed.disableServiceAccountKeyCreation" --project=liquid-fort-453121-g5
-    6  gcloud organizations list
-    7  950157668093
-    8  gcloud org-policies describe constraints/iam.managed.disableServiceAccountKeyCreation --organization=ORG_ID --effective
-    9  gcloud org-policies describe constraints/iam.managed.disableServiceAccountKeyCreation --organization=950157668093 --effective
-   10  gcloud organizations get-iam-policy 950157668093
-   11  gcloud org-policies reset constraints/iam.managed.disableServiceAccountKeyCreation --organization=950157668093
-   12  gcloud org-policies describe constraints/iam.managed.disableServiceAccountKeyCreation --organization=ORG_ID --effective
-   13  gcloud org-policies describe constraints/iam.managed.disableServiceAccountKeyCreation --organization=950157668093 --effective
-   14  history
-anhminh_nguyen@cloudshell:~ (liquid-fort-453121-g5)$ 
-```
 - Recommendations: Check the list of Active policies and disable it. That would be faster
-
 ### Signing the CSR with one of the CA
-
+```linux
 - Install the certbot: `sudo apt install certbot`
 - Use this command to sign the CSR (x.509 convention): `sudo certbot certonly --manual --preferred-challenges dns -d noveltellers.com`
 [sudo] password for zedttxj:
@@ -33,3 +14,55 @@ Enter email address (used for urgent renewal and security notices)
 An e-mail address or --register-unsafely-without-email must be provided.
 Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
 zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
+```
+### Interacting with Chronicle API using service account key via REST API  
+
+#### Setting up authentication
+- Example code:  
+    ```python3
+    from google.oauth2 import service_account
+    from google.auth.transport.requests import Request
+    import google.auth
+    import json
+    
+    # Path to your service account key file
+    key_path = 'path/to/your-service-account-key.json'
+    
+    # Scopes required for Chronicle API
+    SCOPES = ["https://www.googleapis.com/auth/cloud-platform"]
+    
+    # Load the service account credentials
+    credentials = service_account.Credentials.from_service_account_file(
+        key_path,
+        scopes=SCOPES
+    )
+    
+    # Ensure the token is refreshed
+    credentials.refresh(Request())
+    
+    print(f"Authenticated with access token: {credentials.token}")
+    ```
+- The output is like this:  
+  ![{B5059D1A-7076-4D54-8299-D1182455A186}](https://github.com/user-attachments/assets/c01e1dc5-78b5-48d3-bb18-778beb86c459)  
+
+#### Make API calls:
+
+- Example code:
+  ```python3
+    import requests
+  
+    # Set up the API endpoint and request headers with the access token
+    endpoint_url = "https://backstory.googleapis.com/v1/your_endpoint_here"  # Replace with actual API endpoint
+    headers = {
+        "Authorization": f"Bearer {credentials.token}",
+        "Content-Type": "application/json",
+    }
+    
+    # Make a GET or POST request to Chronicle API
+    response = requests.get(endpoint_url, headers=headers)
+    
+    if response.status_code == 200:
+        print("Response data:", json.dumps(response.json(), indent=2))
+    else:
+        print(f"Error: {response.status_code}, {response.text}")
+  ```
