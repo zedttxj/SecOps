@@ -49,7 +49,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   ![{B5059D1A-7076-4D54-8299-D1182455A186}](https://github.com/user-attachments/assets/c01e1dc5-78b5-48d3-bb18-778beb86c459)  
 
 #### Make API calls:
-
+- List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w  
 - Example code:
   ```python3
     import requests
