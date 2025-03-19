@@ -138,7 +138,8 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   - Note: you can get a list of your projects' IDs with the gcloud CLI like this: `gcloud projects list`  
 
 #### Make API calls:
-- List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w  
+- List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w
+- API sample with python: https://github.com/chronicle/api-samples-python  
 - Example code:
   ```python3
     import requests
