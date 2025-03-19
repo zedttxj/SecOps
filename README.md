@@ -67,6 +67,75 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   ![{B5059D1A-7076-4D54-8299-D1182455A186}](https://github.com/user-attachments/assets/c01e1dc5-78b5-48d3-bb18-778beb86c459)
 - Note: It's recommended to have `https://www.googleapis.com/auth/chronicle-backstory` instead of using `cloud-platform` (for general purpose).
 
+#### Enable Backstory API for your project (in my case is Chronicle API project)
+- Before enabling, I tried `SetUIState` with this example code:
+  ```python3
+  import requests
+  
+  # The API endpoint for querying events
+  endpoint_url = "https://backstory.googleapis.com/v1/partner/customer/setuistate:state"
+  
+  # Query body (adjust filter and other parameters as needed)
+  data = {
+      "customer_code": "CODE",  # Replace with actual customer code
+      "state": True  # True to enable, False to disable
+  }
+  
+  # Headers for the request, including the access token
+  headers = {
+      "Authorization": f"Bearer {credentials.token}",
+      "Content-Type": "application/json"
+  }
+  
+  # Make the POST request
+  response = requests.post(endpoint_url, headers=headers)
+  
+  # Check if the request was successful
+  if response.status_code == 200:
+      print("UI state successfully updated!")
+      print(json.dumps(response.json(), indent=2))
+  else:
+      print(f"Error: {response.status_code}, {response.text}")
+  ```
+- The data is retrieved with 403 exit code:
+  ```json
+  Error: 403, {
+    "error": {
+      "code": 403,
+      "message": "Backstory API has not been used in project <my project number> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+      "status": "PERMISSION_DENIED",
+      "details": [
+        {
+          "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+          "reason": "SERVICE_DISABLED",
+          "domain": "googleapis.com",
+          "metadata": {
+            "service": "backstory.googleapis.com",
+            "activationUrl": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number>",
+            "consumer": "projects/<my project number>",
+            "containerInfo": "<my project number>",
+            "serviceTitle": "Backstory API"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+          "locale": "en-US",
+          "message": "Backstory API has not been used in project <my project number> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.Help",
+          "links": [
+            {
+              "description": "Google developers console API activation",
+              "url": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number>"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  ```
+
 #### Make API calls:
 - List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w  
 - Example code:
