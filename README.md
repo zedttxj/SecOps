@@ -136,7 +136,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   }
   ```
   - Note: you can get a list of your projects' IDs with the gcloud CLI like this: `gcloud projects list`
-  Apparently, I couldn't enable my Backstory API when I access the [link](https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id>). I also tried `gcloud services enable backstory.googleapis.com --project=<my project id>`:
+  - Apparently, I couldn't enable my Backstory API when I access the [link](https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id>). I also tried `gcloud services enable backstory.googleapis.com --project=<my project id>`:
   ```gcloud
   ERROR: (gcloud.services.enable) PERMISSION_DENIED: Permission denied to enable service [backstory.googleapis.com]
   Help Token: <the token>. This command is authenticated as <owner's email> which is the active account specified by the [core/account] property
@@ -152,7 +152,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
       service: servicemanagement.googleapis.com
     reason: AUTH_PERMISSION_DENIED
   ```
-  Solution: you gotta enable it with the OAuth token from your `.json` key. Simply put, change the `endpoin_url` into "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=705233697694" so that it includes the access token:
+  - Solution: you gotta enable it with the OAuth token from your `.json` key. Simply put, change the `endpoin_url` into "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=705233697694" so that it includes the access token:
   ```python3
   # Headers for the request, including the access token
   headers = {
