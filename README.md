@@ -163,7 +163,11 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   # Make the POST request
   response = requests.get(endpoint_url, headers=headers)
   ```
-  And we enabled Backstory API for our project
+  And we enabled Backstory API for our project:
+  ```linux
+  zedttxj@LAPTOP-AIAK8VAQ:~/test$ python3 restapi.py
+  UI state successfully updated!
+  ```
 #### Make API calls:
 - List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w
 - API sample with python: https://github.com/chronicle/api-samples-python  
