@@ -7,18 +7,18 @@
 ![{14F1AD88-9810-450E-AA47-2AE5FC8447CF}](https://github.com/user-attachments/assets/2f4b9615-51a2-4d33-85f4-310f5de20505)
 ### Check out for subdomains in Chronicle
 #### 1. Check for Chronicle API
-      ```linux
-        gcloud services list --enabled | grep chronicle
-        Reauthentication required.
-        Please enter your password:
-        Reauthentication successful.
-        chronicle.googleapis.com                Chronicle API
-      ```
-      If `chronicle.googleapis.com` appears, it means Chronicle is enabled in your project.
+```linux
+  gcloud services list --enabled | grep chronicle
+  Reauthentication required.
+  Please enter your password:
+  Reauthentication successful.
+  chronicle.googleapis.com                Chronicle API
+```
+If `chronicle.googleapis.com` appears, it means Chronicle is enabled in your project.
 #### 2. Check for Google SecOps page
 In `console.cloud.google.com`, click on the menu (3 horizontal slashes) and then go to `Security` > `Google SecOps`. Recommend to access in Incognito mode to rule out any extension issues. Looks something like this:  
 ![{DBDFE784-2A03-40A1-A072-ED7698EEA8B2}](https://github.com/user-attachments/assets/6e4b97b9-6617-4524-ac61-7c292f7f4fb5)  
-If this page shows up, it means you haven't set up any instance yet.
+If this page shows up, it means you haven't set up any instance yet. You would have to create a subdomain. Follows the video on Youtube 'How to Create a Subdomain in Google Domains(simple example)'.
 
 ### Disable Key Creation Policy in Organization Level
 - Recommendations: Check the list of Active policies and disable it. That would be faster
