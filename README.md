@@ -152,7 +152,18 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
       service: servicemanagement.googleapis.com
     reason: AUTH_PERMISSION_DENIED
   ```
-
+  Solution: you gotta enable it with the OAuth token from your `.json` key. Simply put, change the `endpoin_url` into "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=705233697694" so that it includes the access token:
+  ```python3
+  # Headers for the request, including the access token
+  headers = {
+      "Authorization": f"Bearer {credentials.token}",
+      "Content-Type": "application/json"
+  }
+  
+  # Make the POST request
+  response = requests.get(endpoint_url, headers=headers)
+  ```
+  And we enabled Backstory API for our project
 #### Make API calls:
 - List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w
 - API sample with python: https://github.com/chronicle/api-samples-python  
