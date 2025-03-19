@@ -16,9 +16,8 @@
       ```
       If `chronicle.googleapis.com` appears, it means Chronicle is enabled in your project.
 #### 2. Check for Google SecOps page
-      In `console.cloud.google.com`, click on the menu (3 horizontal slashes) and then go to `Security` > `Google SecOps`. Recommend to access in Incognito mode to rule out any extension issues. Looks something like this:  
-      ![{DBDFE784-2A03-40A1-A072-ED7698EEA8B2}](https://github.com/user-attachments/assets/6e4b97b9-6617-4524-ac61-7c292f7f4fb5)  
-
+In `console.cloud.google.com`, click on the menu (3 horizontal slashes) and then go to `Security` > `Google SecOps`. Recommend to access in Incognito mode to rule out any extension issues. Looks something like this:  
+![{DBDFE784-2A03-40A1-A072-ED7698EEA8B2}](https://github.com/user-attachments/assets/6e4b97b9-6617-4524-ac61-7c292f7f4fb5)  
 
 ### Disable Key Creation Policy in Organization Level
 - Recommendations: Check the list of Active policies and disable it. That would be faster
