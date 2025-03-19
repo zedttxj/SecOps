@@ -88,4 +88,4 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
     else:
         print(f"Error: {response.status_code}, {response.text}")
   ```
-- Note: change your url according to your region. In my case, I use `us-chronicle`.
+- Note: change your url according to your region. In my case, I use `us-chronicle`. You can check the list of available region here: https://cloud.google.com/chronicle/docs/reference/customer-management-api
