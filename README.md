@@ -102,7 +102,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
   Error: 403, {
     "error": {
       "code": 403,
-      "message": "Backstory API has not been used in project <my project number> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+      "message": "Backstory API has not been used in project <my project id> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
       "status": "PERMISSION_DENIED",
       "details": [
         {
@@ -111,23 +111,23 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
           "domain": "googleapis.com",
           "metadata": {
             "service": "backstory.googleapis.com",
-            "activationUrl": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number>",
-            "consumer": "projects/<my project number>",
-            "containerInfo": "<my project number>",
+            "activationUrl": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id>",
+            "consumer": "projects/<my project id>",
+            "containerInfo": "<my project id>",
             "serviceTitle": "Backstory API"
           }
         },
         {
           "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
           "locale": "en-US",
-          "message": "Backstory API has not been used in project <my project number> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+          "message": "Backstory API has not been used in project <my project id> before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id> then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
         },
         {
           "@type": "type.googleapis.com/google.rpc.Help",
           "links": [
             {
               "description": "Google developers console API activation",
-              "url": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project number>"
+              "url": "https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id>"
             }
           ]
         }
