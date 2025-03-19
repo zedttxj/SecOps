@@ -21,7 +21,7 @@ In `console.cloud.google.com`, click on the menu (3 horizontal slashes) and then
 If this page shows up, it means you haven't set up any instance yet. You would have to create a subdomain. Follows the video on Youtube 'How to Create a Subdomain in Google Domains(simple example)'.
 
 ### Disable Key Creation Policy in Organization Level
-- Recommendations: Check the list of Active policies and disable it. That would be faster
+- Recommendations: Check the list of Active policies and disable it. That would be faster. This helps you create the key. After creating the key for the Chronicle API project, the key will be automatically downloaded into your computer. Use that key for `Interacting with Chronicle API using service account key via REST API`.
 ### Signing the CSR with one of the CA
 - Install the certbot: `sudo apt install certbot`
 - Use this command to sign the CSR (x.509 convention): `sudo certbot certonly --manual --preferred-challenges dns -d noveltellers.com`
