@@ -74,7 +74,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
     import requests
   
     # Set up the API endpoint and request headers with the access token
-    endpoint_url = "https://us-chronicle.googleapis.com/v1alpha/your_endpoint_here"  # Replace with actual API endpoint
+    endpoint_url = "https://backstory.googleapis.com/v1alpha/your_endpoint_here"  # Replace with actual API endpoint
     headers = {
         "Authorization": f"Bearer {credentials.token}",
         "Content-Type": "application/json",
