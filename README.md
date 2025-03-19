@@ -5,6 +5,15 @@
 - Log-in to ui link: https://cloud.google.com/chronicle/docs/log-in-to-ui  
 ### Create Web and Mobile Apps - Chronicle Demo
 ![{14F1AD88-9810-450E-AA47-2AE5FC8447CF}](https://github.com/user-attachments/assets/2f4b9615-51a2-4d33-85f4-310f5de20505)
+### Check out for subdomains in Chronicle
+#### 1. Check for Chronicle API
+      ```linux
+        gcloud services list --enabled | grep chronicle
+        Reauthentication required.
+        Please enter your password:
+        Reauthentication successful.
+        chronicle.googleapis.com                Chronicle API
+      ```
 
 ### Disable Key Creation Policy in Organization Level
 - Recommendations: Check the list of Active policies and disable it. That would be faster
