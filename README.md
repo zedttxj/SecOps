@@ -24,7 +24,7 @@ If this page shows up, it means you haven't set up any instance yet. You would h
 - Recommendations: Check the list of Active policies and disable it. That would be faster. This helps you create the key. After creating the key for the Chronicle API project, the key will be automatically downloaded into your computer. Use that key for `Interacting with Chronicle API using service account key via REST API`.
 ### Signing the CSR with one of the CA
 - Install the certbot: `sudo apt install certbot`
-- Use this command to sign the CSR (x.509 convention): `sudo certbot certonly --manual --preferred-challenges dns -d noveltellers.com`
+- Use this command to sign the CSR (x.509 convention): `sudo certbot certonly --manual --preferred-challenges dns -d <my domain name>`
 ```linux
 [sudo] password for zedttxj:
 /usr/local/lib/python3.10/dist-packages/requests-2.20.0-py3.10.egg/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.5) or chardet (4.0.0) doesn't match a supported version!
