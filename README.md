@@ -135,7 +135,23 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
     }
   }
   ```
-  - Note: you can get a list of your projects' IDs with the gcloud CLI like this: `gcloud projects list`  
+  - Note: you can get a list of your projects' IDs with the gcloud CLI like this: `gcloud projects list`
+  Apparently, I couldn't enable my Backstory API when I access the [link](https://console.developers.google.com/apis/api/backstory.googleapis.com/overview?project=<my project id>). I also tried `gcloud services enable backstory.googleapis.com --project=<my project id>`:
+  ```gcloud
+  ERROR: (gcloud.services.enable) PERMISSION_DENIED: Permission denied to enable service [backstory.googleapis.com]
+  Help Token: <the token>. This command is authenticated as <owner's email> which is the active account specified by the [core/account] property
+  - '@type': type.googleapis.com/google.rpc.PreconditionFailure
+    violations:
+    - subject: ...
+      type: googleapis.com
+  - '@type': type.googleapis.com/google.rpc.ErrorInfo
+    domain: serviceusage.googleapis.com
+    metadata:
+      permission: servicemanagement.services.bind
+      resource: '<my project id>'
+      service: servicemanagement.googleapis.com
+    reason: AUTH_PERMISSION_DENIED
+  ```
 
 #### Make API calls:
 - List of available endpoints for REST API calls: https://cloud.google.com/chronicle/docs/reference/rest?_gl=1*tad13c*_ga*MTkxNjU0Nzc2Ny4xNzQxNDY4NTE3*_ga_WH2QY8WWF5*MTc0MjMxMzYzMS4xMS4xLjE3NDIzMTU4NzIuNDMuMC4w
