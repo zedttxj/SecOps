@@ -1,8 +1,12 @@
-# SecOps
+# Google SecOps
 ### Introduction to Backstory
 - Link: https://medium.com/chronicle-blog/introducing-backstory-45dd9b4d4a6d
 - To check project ID: `gcloud config list project` (on gcloud console)
-- Log-in to ui link: https://cloud.google.com/chronicle/docs/log-in-to-ui  
+- Log-in to ui link: https://cloud.google.com/chronicle/docs/log-in-to-ui
+### What is IdP (Identity Provider)?
+In the case of device fingerprinting: Users can register their devices with the organization and associate them with their user accounts. The device authentication system then captures the characteristics of the device (often accomplished by having the user access a web page with the device). The registration system then identifies the device using attributes such as the operating system and version, web browser, browser fonts, browser plug-ins (extensions), time zone, data storage, screen resolution, cookie settings, and HTTP headers. Even though some of these characteristics change over time, this has proven to be a successful device authentication method. Organizations often use third-party tools like SecureAuth Identity Provider (**IdP**). MDM systems use contexts-aware authentication methods to identify devices. 802.1X is another method used for device authentication (implemented by MDM or NAC solutions).
+### What is Service Account?
+Many services require authentication. A service account is simply a user account that an administrator created for a service or application instead of a person.
 ### Create IdP App - Chronicle Demo
 ![{14F1AD88-9810-450E-AA47-2AE5FC8447CF}](https://github.com/user-attachments/assets/2f4b9615-51a2-4d33-85f4-310f5de20505)
 ### Check out for subdomains in Chronicle
