@@ -68,6 +68,7 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
 - Note: It's recommended to have `https://www.googleapis.com/auth/chronicle-backstory` instead of using `cloud-platform` (for general purpose).
 
 #### Enable Backstory API for your project (in my case is Chronicle API project)
+- Notice: Google SecOps (Chronicle Backstory) isn’t publicly available for individual study. It’s locked behind enterprise sales, which makes it difficult for students or independent learners to get hands-on experience. You gotta contact the [Google Cloud Security](https://cloud.google.com/contact/security?hl=en)
 - Before enabling, I tried `SetUIState` with this example code:
   ```python3
   import requests
