@@ -18,7 +18,7 @@ If `chronicle.googleapis.com` appears, it means Chronicle is enabled in your pro
 #### 2. Check for Google SecOps page
 In `console.cloud.google.com`, click on the menu (3 horizontal slashes) and then go to `Security` > `Google SecOps`. Recommend to access in Incognito mode to rule out any extension issues. Looks something like this:  
 ![{DBDFE784-2A03-40A1-A072-ED7698EEA8B2}](https://github.com/user-attachments/assets/6e4b97b9-6617-4524-ac61-7c292f7f4fb5)  
-If this page shows up, it means you haven't set up any instance yet. You would have to contact the [Google Cloud Security](https://cloud.google.com/contact/security?hl=en) to create a subdomain for Google SecOps (Chronicle Backstory).
+If this page shows up, it means you haven't set up any instance yet. You would have to contact the [Google Cloud Security](https://cloud.google.com/contact/security?hl=en) to create a subdomain for Google SecOps (Chronicle Backstory). Chronicle Backstory isn’t publicly available for individual study (not in the API library). It’s locked behind enterprise sales, which makes it difficult for students or independent learners to get hands-on experience.
 
 ### Disable Key Creation Policy in Organization Level
 - Recommendations: Check the list of Active policies and disable it. That would be faster. This helps you create the key. After creating the key for the Chronicle API project, the key will be automatically downloaded into your computer. Use that key for `Interacting with Chronicle API using service account key via REST API`.
