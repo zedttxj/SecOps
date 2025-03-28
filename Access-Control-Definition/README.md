@@ -27,7 +27,8 @@ Security policy defines security requirements for an organization. Some organiza
 - A DAC model is implemeneted using ACLs on objects. Each ACL defines the types of access granted or denied to subjects. It doesn’t offer a centrally controlled management system because owners can alter the ACLs on their objects at will.
 
 ## 2. Mandatory Access Control (MAC)
-- The use of labels is applied to both subjects and objects. When documented in a table, the MAC model sometimes resembles a lattice (such as the one used for a climbing rosebush), so it is referred to as a lattice-based model.
+- The use of labels is applied to both subjects and objects. When documented in a table, the MAC model sometimes resembles a lattice (such as the one used for a climbing rosebush), so it is referred to as a lattice-based model.  
+  ![image](https://github.com/user-attachments/assets/7bc8959d-c625-4159-b0e4-1b9ee2d69b1a)  
 - **Example:** If a user has a label of top secret, the user can be granted access to a top-secret document (matching labels).
 
 ## 3. Role-Based Access Control (RBAC)
