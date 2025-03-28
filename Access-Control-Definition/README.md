@@ -36,7 +36,7 @@ Security policy defines security requirements for an organization. Some organiza
   - Hybrid Environment: Combining both hierarchical and compartmentalized concepts so that each hierarchical level may contain numberous subdivisions that are isolated from the rest of the security domain. It provides granular control over access but becomes increasingly difficult to manage as it grows.
 
 ## 3. Role-Based Access Control (RBAC)
-- instead of assigning prmissions directly to users, user account are placed in roles and administrators assign privileges to the roles. These roles are typically identified by job functions.
+- Instead of assigning prmissions directly to users, user account are placed in roles and administrators assign privileges to the roles. These roles are typically identified by job functions.
 - **Example:** Microsoft Windows operating systems implement this model with the use of groups.
 - Administrators often implement RBAC using groups.
 - Another **example**: A bank may have loan officers, tellers, and managers. Administrators can create a group named Loan Officers, place the user accounts of teach loan officer into this group, and then assign appropriate privileges to the group. If the organization hires a new loan officer, administrators simply add the new loan officer’s account into the Loan Officers group, and the new employee automatically has all the same permissions as other loan officers in this group. Administrators would take similar steps for tellers and managers.
