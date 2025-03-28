@@ -28,8 +28,12 @@ Security policy defines security requirements for an organization. Some organiza
 
 ## 2. Mandatory Access Control (MAC)
 - The use of labels is applied to both subjects and objects. When documented in a table, the MAC model sometimes resembles a lattice (such as the one used for a climbing rosebush), so it is referred to as a lattice-based model. For the example below, within the Confidential section (Lentil, Foil, Crimson, and Matterhorn), users also require the additional label to access data within these compartments. To access Lentil data, users need to have both the Confidential label and the Lentil label. Notice that Sensitive data doesn’t have any additional labels. Users with the Sensitive label can be granted access to any data with the Sensitive label.  
-  ![image](https://github.com/user-attachments/assets/7bc8959d-c625-4159-b0e4-1b9ee2d69b1a)  
+  ![image](https://github.com/user-attachments/assets/7bc8959d-c625-4159-b0e4-1b9ee2d69b1a)
 - **Example:** If a user has a label of top secret, the user can be granted access to a top-secret document (matching labels).
+- Using compartmentalization with the MAC model enforces the *need to know* principle. The MAC model is more security than the DAC model, but it isn’t as flexible or scalable. Classifications within a MAC model use one of the following three types of environment:
+  - Hierarchical Environment: relates various classification labels in an ordered structure from low security to medium security to high security (like Confidential, Secret, and Top Secret). Clearance in one level grants the subject access to objects in that level as well as to all objects in lower levels.
+  - Compartmentalized Environment: there’s no relationship between one security domain and another. To gain access to an object, the subject must have specific clearance for the object’s security domain.
+  - Hybrid Environment: Combining both hierarchical and compartmentalized concepts so that each hierarchical level may contain numberous subdivisions that are isolated from the rest of the security domain. It provides granular control over access but becomes increasingly difficult to manage as it grows.
 
 ## 3. Role-Based Access Control (RBAC)
 - instead of assigning prmissions directly to users, user account are placed in roles and administrators assign privileges to the roles. These roles are typically identified by job functions.
