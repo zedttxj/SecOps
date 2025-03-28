@@ -22,7 +22,7 @@ Security policy defines security requirements for an organization. Some organiza
 # Comparing Access Control Models
 
 ## 1. Discretionary Access Control (DAC)
-- Every object has an owner and the owner can grant or deny access to any other subjects.
+- Every object has an owner (**data custodian**) and the owner can grant or deny access to any other subjects.
 - **Example:** The New Technology File System (NTFS), used on Microsoft Windows operating systems, uses the DAC model. Data owners can also delegate day-to-day tasks for handling data to data custodians, giving data custodians the ability to modify permissions.
 - A DAC model is implemeneted using ACLs on objects. Each ACL defines the types of access granted or denied to subjects. It doesn’t offer a centrally controlled management system because owners can alter the ACLs on their objects at will.
 
