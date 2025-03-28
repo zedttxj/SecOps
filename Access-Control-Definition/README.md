@@ -57,6 +57,9 @@ Security policy defines security requirements for an organization. Some organiza
 - Uses a set of policies to define who can do what.
 - **Example:** Cloud providers like AWS use PBAC to let organizations define custom rules for access.
 
+## 9. Non-discretionary Access Control
+- Administrators centrally administer nondiscretionary access controls and can make changes that affect the entire environment. Access doesn’t focus on user identity. Instead, a static set of rules governing the whole environment manage access. Non-DAC systems are centrally controlled and easier to manage (although less flexible). In general, any model that isn’t a discretionary model is a nondiscretionary model.
+
 # Access Control Lists (ACL)
 
 ## 1. ACL in Networking (Router, Firewall)
