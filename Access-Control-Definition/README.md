@@ -63,6 +63,10 @@ Security policy defines security requirements for an organization. Some organiza
 ## 9. Non-discretionary Access Control
 - Administrators centrally administer nondiscretionary access controls and can make changes that affect the entire environment. Access doesn’t focus on user identity. Instead, a static set of rules governing the whole environment manage access. Non-DAC systems are centrally controlled and easier to manage (although less flexible). In general, any model that isn’t a discretionary model is a nondiscretionary model.
 
+## 10. Task-based Access Control (TBAC)
+- Another method related to RBAC is task-based access control. Instead of being assigned to one or more roles, each user is assigned an array of tasks. The focus is on controlling access by assigned tasks rather than by user identity.
+- **Example:** Microsoft Project uses TBAC. Each project has multiple tasks. The project manager assigns tasks to project team personnel. Team personnel can address their own tasks (adding comments, indicating progress, and so on), but they cannot address other tasks. Microsoft Project handles the underlying details.
+
 # Access Control Lists (ACL)
 
 ## 1. ACL in Networking (Router, Firewall)
