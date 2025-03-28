@@ -39,7 +39,7 @@ Security policy defines security requirements for an organization. Some organiza
 
 ## 4. Attribute-Based Access Control (ABAC)
 - Its use of rules that can include multiple attributes, allowing it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally. It’s an advanced implementation of a rule-based access control.
-- **Example:** Many SDNs use the ABAC model. Additionally, ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device.”
+- **Example:** Many SDNs use the ABAC model. Additionally, ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device.” MDM systems can use attributes to identify mobile devices, allowing the user to log on when the attributes match and verified.
 
 ## 5. Rule-Based Access Control
 - It applies global rules to all subjects. Rules within the rule-based access control model are sometimes referred to as restrictions or filters.
