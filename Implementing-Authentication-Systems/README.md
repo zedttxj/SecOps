@@ -32,7 +32,7 @@ Imagine you want to transfer money from Bank A to Bank B. You could give Bank B 
       6. If you’ve enabled 2-Step Verification on your Google account, you’ll be prompted to get the code and enter it.
       7. You don’t need to complete the creation of an eBay account with your Google account. However, if you choose to do so, click the Create Account button. You’ll now be logged on to eBay using your Google account. If you log out of eBay and try to log on again, all you need to do is click Sign In and then click Continue with Google. As long as you’re still logged on with Google, you’ll be logged in to eBay without any more steps.
 
-### Comparing SAML, OAuth, OpenID, and OIDC
+**Comparing SAML, OAuth, OpenID, and OIDC**
 - SAML:
   - SAML 2.0 is an open XML-based standard
   - OASIS adopted it as a standard in 2005
