@@ -38,7 +38,7 @@ Security policy defines security requirements for an organization. Some organiza
   ![{D490EC1E-FC1D-461B-B304-5526AC26B3D3}](https://github.com/user-attachments/assets/c58f951d-da4f-4d75-917d-ddda1d4f038f)
 
 ## 4. Attribute-Based Access Control (ABAC)
-- Its use of rules that can include multiple attributes, allowing it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally.
+- Its use of rules that can include multiple attributes, allowing it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally. It’s an advanced implementation of a rule-based access control.
 - **Example:** Many SDNs use the ABAC model. Additionally, ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device.”
 
 ## 5. Rule-Based Access Control
