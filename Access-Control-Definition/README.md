@@ -1,13 +1,11 @@
-# Access Control Models
+# Understading terms used in Access Control Models
 
-## Understading terms used
-
-### Comparing Permissions, Rights, and Privileges
+## Comparing Permissions, Rights, and Privileges
 - Permissions: the access granted for an object and determine what you can do with it
 - Rights: ability to take an action on an object
 - Privileges: combination of rights and permissions
 
-### Understanding Authorization Mechanism
+## Understanding Authorization Mechanism
 - Implicit Deny: access to an object is denied unless access has been explicitly granted to a subject.
 - Access Control Matrix: a table that includes subjects, objects, and assigned privileges. An access control matrix can include a group of files as the objects and a group of users as the subjects. This covers much more than a single access control list (ACL). Each file listed within the matrix has a separate ACL that lists the authorized users and their assigned permissions.
 - Capability Tables: different from ACLs in that a capability table is focused on subjects (like users, groups, or roles). It helps identify privileges assigned to subjects.
@@ -18,8 +16,10 @@ vi.Context-Dependent Control: require specific activity before granting users ac
 - Least Privilege: subjects are granted minimum privileges.
 - Separation of Duties and Responsibilities: helps prevent fraud and errors by creating a system of checks and balances.
 
-### Defining Requirements with a Security Policy:
+## Defining Requirements with a Security Policy:
 Security policy defines security requirements for an organization. Some organizations create multiple security policies focusing on a separate area. It may state the need to implement and enforce separation of duties and least privilege principles but not state how to do so.
+
+# Comparing Access Control Models
 
 ## 1. Discretionary Access Control (DAC)
 - Every object has an owner and the owner can grant or deny access to any other subjects.
@@ -55,8 +55,6 @@ Security policy defines security requirements for an organization. Some organiza
 ## 8. Policy-Based Access Control (PBAC)
 - Uses a set of policies to define who can do what.
 - **Example:** Cloud providers like AWS use PBAC to let organizations define custom rules for access.
-
----
 
 # Access Control Lists (ACL)
 
