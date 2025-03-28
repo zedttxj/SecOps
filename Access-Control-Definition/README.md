@@ -1,5 +1,26 @@
 # Access Control Models
 
+## Understading terms used
+
+### Comparing Permissions, Rights, and Privileges
+- Permissions: the access granted for an object and determine what you can do with it
+- Rights: ability to take an action on an object
+- Privileges: combination of rights and permissions
+
+### Understanding Authorization Mechanism
+- Implicit Deny: access to an object is denied unless access has been explicitly granted to a subject.
+- Access Control Matrix: a table that includes subjects, objects, and assigned privileges. An access control matrix can include a group of files as the objects and a group of users as the subjects. This covers much more than a single access control list (ACL). Each file listed within the matrix has a separate ACL that lists the authorized users and their assigned permissions.
+- Capability Tables: different from ACLs in that a capability table is focused on subjects (like users, groups, or roles). It helps identify privileges assigned to subjects.
+- Constrained Interface (or restricted interface): Applications use constrained interfaces to restrict what users can do or see based on their privileges. The Clark-Wilson model discusses the technical details of how it implements a constrained interface.
+- Content-Dependent Control: restrict access to data based on the content within an object. A database view (like in SQL query) is a content-dependent control.
+vi.Context-Dependent Control: require specific activity before granting users access (like when you purchasing on the website that leads to different distinct pages). It’s also possible to use date and time controls as context-dependent controls (like denying access when the user access outside the allowed time).
+- Need to Know: subjects are granted minimum accesses
+- Least Privilege: subjects are granted minimum privileges.
+- Separation of Duties and Responsibilities: helps prevent fraud and errors by creating a system of checks and balances.
+
+### Defining Requirements with a Security Policy:
+Security policy defines security requirements for an organization. Some organizations create multiple security policies focusing on a separate area. It may state the need to implement and enforce separation of duties and least privilege principles but not state how to do so.
+
 ## 1. Discretionary Access Control (DAC)
 - Every object has an owner and the owner can grant or deny access to any other subjects.
 - **Example:** The New Technology File System (NTFS), used on Microsoft Windows operating systems, uses the DAC model.
