@@ -31,3 +31,28 @@ Imagine you want to transfer money from Bank A to Bank B. You could give Bank B 
       5. Enter your password and click Next.
       6. If you’ve enabled 2-Step Verification on your Google account, you’ll be prompted to get the code and enter it.
       7. You don’t need to complete the creation of an eBay account with your Google account. However, if you choose to do so, click the Create Account button. You’ll now be logged on to eBay using your Google account. If you log out of eBay and try to log on again, all you need to do is click Sign In and then click Continue with Google. As long as you’re still logged on with Google, you’ll be logged in to eBay without any more steps.
+
+### Comparing SAML, OAuth, OpenID, and OIDC
+- SAML:
+  - SAML 2.0 is an open XML-based standard
+  - OASIS adopted it as a standard in 2005
+  - It utilizes three entities: a principal (such as a user), a service provider (such as a website), and an identity provider (a third party that holds the authentication and authorization information)
+  - It can provide authentication, authorization, and attribute information on the principal
+- OAuth:
+  - It’s an authorization framework, not an authentication protocol
+  - RFC 6749 describes OAuth 2.0
+  - It exchanges information using APIs
+  - An app obtains an access token from an identity provider
+  - Later, the app includes the access token for authorization
+- OpenID
+  - OpenID is an authentication standard
+  - It is maintained by the OpenID Foundation
+  - An OpenID provider provides decentralized authentication
+  - Users enter their Open ID identifier (such as bobsmith2021.myopenid.com) on a site and the OpenID provider verifies the identifier.
+- OIDC
+  - OIDC is an authentication layer using OAuth 2.0
+  - It builds on the OpenID authentication standard
+  - It provides both authentication and authorization
+  - It builds on OpenID but uses a JWT.
+
+## Implementing SSO on Internal Networks
