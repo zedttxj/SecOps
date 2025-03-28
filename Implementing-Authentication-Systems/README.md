@@ -24,10 +24,10 @@ Imagine you want to transfer money from Bank A to Bank B. You could give Bank B 
   - OIDC (OpenID Connect): an authentication layer using the OAuth 2.0 authorization framework. It’s maintained by the OpenID Foundation. It builds on the technologies created with OpenID but uses a JWT (or ID token). OIDC uses a web service to retrieve the JWT. In addition to providing authentication, the JWT can also include profile information about the user.
     - Practice on understanding JWT: this [practice](https://play.picoctf.org/practice/challenge/236?category=1&page=4) can help you gain more understanding about JWT (also where I first learned about it).
     - Example: Most of this occurs behind the scenes, but you can see it in action by logging onto eBay with a Google account. These processes and interfaces change over time, but the general steps are as follows:
-    1. If you don’t have a Google account, create one first.
-    2. Ensure you’re logged out of eBay and Google, go to ebay.com, and click Sign In.
-    3. Click Continue With Google. A dialog box opens, prompting you to enter your Google email. It also indicates what Google will share with ebay.com.
-    4. Enter your email address and press Enter.
-    5. Enter your password and click Next.
-    6. If you’ve enabled 2-Step Verification on your Google account, you’ll be prompted to get the code and enter it.
-    7. You don’t need to complete the creation of an eBay account with your Google account. However, if you choose to do so, click the Create Account button. You’ll now be logged on to eBay using your Google account. If you log out of eBay and try to log on again, all you need to do is click Sign In and then click Continue with Google. As long as you’re still logged on with Google, you’ll be logged in to eBay without any more steps.
+      1. If you don’t have a Google account, create one first.
+      2. Ensure you’re logged out of eBay and Google, go to ebay.com, and click Sign In.
+      3. Click Continue With Google. A dialog box opens, prompting you to enter your Google email. It also indicates what Google will share with ebay.com.
+      4. Enter your email address and press Enter.
+      5. Enter your password and click Next.
+      6. If you’ve enabled 2-Step Verification on your Google account, you’ll be prompted to get the code and enter it.
+      7. You don’t need to complete the creation of an eBay account with your Google account. However, if you choose to do so, click the Create Account button. You’ll now be logged on to eBay using your Google account. If you log out of eBay and try to log on again, all you need to do is click Sign In and then click Continue with Google. As long as you’re still logged on with Google, you’ll be logged in to eBay without any more steps.
