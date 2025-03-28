@@ -23,7 +23,8 @@ Security policy defines security requirements for an organization. Some organiza
 
 ## 1. Discretionary Access Control (DAC)
 - Every object has an owner and the owner can grant or deny access to any other subjects.
-- **Example:** The New Technology File System (NTFS), used on Microsoft Windows operating systems, uses the DAC model.
+- **Example:** The New Technology File System (NTFS), used on Microsoft Windows operating systems, uses the DAC model. Data owners can also delegate day-to-day tasks for handling data to data custodians, giving data custodians the ability to modify permissions.
+- A DAC model is implemeneted using ACLs on objects. Each ACL defines the types of access granted or denied to subjects. It doesn’t offer a centrally controlled management system because owners can alter the ACLs on their objects at will.
 
 ## 2. Mandatory Access Control (MAC)
 - The use of labels is applied to both subjects and objects. When documented in a table, the MAC model sometimes resembles a lattice (such as the one used for a climbing rosebush), so it is referred to as a lattice-based model.
@@ -49,7 +50,7 @@ Security policy defines security requirements for an organization. Some organiza
 - Used in zero-trust security and fraud prevention.
 
 ## 7. Identity-Based Access Control (IBAC)
-- Grants access based on a specific user’s identity rather than their role.
+- A subset of Discretionary Access Control. Systems identify users based on their identity and assign resource ownership to identities
 - **Example:** A CEO might have unique permissions that no other employees have.
 
 ## 8. Policy-Based Access Control (PBAC)
