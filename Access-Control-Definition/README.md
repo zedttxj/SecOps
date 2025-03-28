@@ -51,11 +51,18 @@ Security policy defines security requirements for an organization. Some organiza
 - **Example:**  A firewall uses rules that allow or block traffic to all users equally
 
 ## 6. Risk-Based Access Control (RBAC, but different from Role-Based)
-- Grants access after evaluating risk. It evaluates the environment and the situation and makes risk-based decisions using policies embedded within software code. It uses machine learning to make predictive conclusions about current activity based on past activity.
+- Grants access after evaluating risk. It evaluates the environment and the situation and makes risk-based decisions using policies embedded within software code. It uses machine learning to make predictive conclusions about current activity based on past activity. Or, it can sometimes use binary rules to control access.
 - **Example:**
   - If a user logs in from an unusual location, require extra authentication.
   - If a device is outdated or unpatched, limit its access.
 - Used in zero-trust security and fraud prevention.
+- Consider this scenario: an information system containing patient information and used by medical professionals. Doctors, nurses, and others working in the emergency room (ER) of a hospital need access to this data for any patient who shows up in the ER. The model attempts to evaluate risk by considering several different elements, such as:
+  - The environment: is the ER in this example. Within cybersecurity, the environment can include items such as the location using the IP address. Some low-risk IP addresses may internal IP addresses and internet-based IP addresses of users who have previously signed in. High-risk IP addresses could be from foreign coutnries, anonymized IP addresses, users signed in from two or more IPs in different countries, and users signed in from unfamiliar locations.
+  - The situation: is the medical emergency in this example. Moreover, the situation may include what a device is doing. Most IoT devices have predictable behavior. If an IoT device suddenly starts flooding a network with malicious traffic, the risk-based model could determine the device is now a high risk and block its access to a network.
+  - Security policies: software code that makes risk-based decisions based on available data. An organization would modify the choices within the software to support their needs. In this example, it consider this a low risk and grant full access to patient data to doctors and nurses.
+  - Two other things can be checked or required before the policy grants access:
+    - Multifactor Authentication
+    - Compliant Mobile Devices: the policy may require that smartphones and tablets meet specific security requirements.
 
 ## 7. Identity-Based Access Control (IBAC)
 - A subset of Discretionary Access Control. Systems identify users based on their identity and assign resource ownership to identities
