@@ -1,39 +1,27 @@
 # Access Control Models
 
 ## 1. Discretionary Access Control (DAC)
-- The owner of a resource (file, database, etc.) decides who gets access.
-- **Example:** In Windows, if you create a file, you can set permissions for other users.
-- **Downside:** Not very secure—users can grant access freely.
+- Every object has an owner and the owner can grant or deny access to any other subjects.
+- **Example:** The New Technology File System (NTFS), used on Microsoft Windows operating systems, uses the DAC model.
 
 ## 2. Mandatory Access Control (MAC)
-- Access is controlled by system-enforced policies (not the user).
-- Common in military and government systems where security classifications matter.
-- **Example:** Top Secret documents can only be accessed by people with Top Secret clearance.
+- The use of labels is applied to both subjects and objects. When documented in a table, the MAC model sometimes resembles a lattice (such as the one used for a climbing rosebush), so it is referred to as a lattice-based model.
+- **Example:** If a user has a label of top secret, the user can be granted access to a top-secret document (matching labels).
 
 ## 3. Role-Based Access Control (RBAC)
-- Users are assigned roles, and roles have permissions.
-- **Example:**
-  - Admins can access everything.
-  - Managers can approve requests but not change system settings.
-  - Employees can only view their own data.
-- Common in corporate IT systems.
+- instead of assigning prmissions directly to users, user account are placed in roles and administrators assign privileges to the roles. These roles are typically identified by job functions.
+- **Example:** Microsoft Windows operating systems implement this model with the use of groups.
 
 ## 4. Attribute-Based Access Control (ABAC)
-- Access is granted based on attributes (user, resource, environment).
-- More flexible than RBAC because it doesn’t rely on fixed roles.
-- **Example:**
-  - "Doctors can view patient records only during work hours."
-  - "Employees can access the system only from company devices."
+- Its use of rules that can include multiple attributes, allowing it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally.
+- **Example:** Many SDNs use the ABAC model. Additionally, ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device.”
 
 ## 5. Rule-Based Access Control
-- Uses if-then rules to grant/deny access.
-- **Example:**
-  - "Block all employees from logging in after 10 PM."
-  - "Allow only encrypted devices to access the network."
-- Often used with other models like RBAC or ABAC.
+- It applies global rules to all subjects. Rules within the rule-based access control model are sometimes referred to as restrictions or filters.
+- **Example:**  A firewall uses rules that allow or block traffic to all users equally
 
 ## 6. Risk-Based Access Control (RBAC, but different from Role-Based)
-- Access depends on a risk score calculated in real-time.
+- Grants access after evaluating risk. It evaluates the environment and the situation and makes risk-based decisions using policies embedded within software code. It uses machine learning to make predictive conclusions about current activity based on past activity.
 - **Example:**
   - If a user logs in from an unusual location, require extra authentication.
   - If a device is outdated or unpatched, limit its access.
@@ -46,12 +34,6 @@
 ## 8. Policy-Based Access Control (PBAC)
 - Uses a set of policies to define who can do what.
 - **Example:** Cloud providers like AWS use PBAC to let organizations define custom rules for access.
-
-## Final Thoughts
-- **If flexibility is needed →** ABAC is the best choice.
-- **If strict rules are needed →** MAC is best.
-- **If simplicity & structure are important →** RBAC works well.
-- **If dynamic decisions are required →** Risk-Based Access Control helps.
 
 ---
 
