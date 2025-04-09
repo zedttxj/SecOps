@@ -201,4 +201,4 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
 - Note: change your url according to your region. In my case, I use `backstory.googleapis.com` for United States Multi-Region. You can check the list of available region here: https://cloud.google.com/chronicle/docs/reference/customer-management-api
 #### List of necessary Google Cloud documents for SIEM
 Here's a list that you may find it useful:
-- **Detection API document:" https://cloud.google.com/chronicle/docs/reference/detection-engine-api
+- **Detection API document:" full [list](https://cloud.google.com/chronicle/docs/reference/detection-engine-api) of detection API methods. You can also review how to authenticate using OAuth2. Some supplemental [practices](https://github.com/chronicle/api-samples-python/tree/master/detect/v2) created by Google SecOps.
