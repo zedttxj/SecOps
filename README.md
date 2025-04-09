@@ -204,3 +204,9 @@ Here's a list that you may find it useful:
 - **Detection API document:** full [list](https://cloud.google.com/chronicle/docs/reference/detection-engine-api) of detection API methods. You can also review how to authenticate using OAuth2. Some supplemental [practices](https://github.com/chronicle/api-samples-python/tree/master/detect/v2) created by Google SecOps.
 - **Chronicle Siemplify Integration:** The [document](https://github.com/zedttxj/SecOps/blob/main/Chronicle-Siemplify-Integration.pdf) is published by Google SecOps. The main thing   to   remember   when   integrating   with   Chronicle   is that Siemplify will require the service account details provided by your Chronicle provider.
 - **Write & Test CNB with CBN Tool:** The [document](github.com/chronicle/cbn-tool) is published by Google SecOps.
+  - Overview of CBN
+    Raw data is converted into our standard format using parsers known as configuration-based normalizers (CBNs).
+    - `data_type.conf` - contains the actual parser code
+    - `data_type.log` - contains log entries used to test the parser, will need to be anonymized later
+    - **File names** contain the **data type name** followed by the extension in lowercase
+    - Examples: infoblox_dhcp.log, pan_firewall.conf
