@@ -199,3 +199,6 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
         print(f"Error: {response.status_code}, {response.text}")
   ```
 - Note: change your url according to your region. In my case, I use `backstory.googleapis.com` for United States Multi-Region. You can check the list of available region here: https://cloud.google.com/chronicle/docs/reference/customer-management-api
+#### List of necessary Google Cloud documents for SIEM
+Here's a list that you may find it useful:
+- **Detection API document:" https://cloud.google.com/chronicle/docs/reference/detection-engine-api
