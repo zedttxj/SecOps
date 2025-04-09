@@ -202,3 +202,4 @@ zedttxj@LAPTOP-AIAK8VAQ:~/test/t$
 #### List of necessary Google Cloud documents for SIEM
 Here's a list that you may find it useful:
 - **Detection API document:** full [list](https://cloud.google.com/chronicle/docs/reference/detection-engine-api) of detection API methods. You can also review how to authenticate using OAuth2. Some supplemental [practices](https://github.com/chronicle/api-samples-python/tree/master/detect/v2) created by Google SecOps.
+- **Chronicle Siemplify Integration:** The [document](https://github.com/zedttxj/SecOps/blob/main/Chronicle-Siemplify-Integration.pdf) is published by Google SecOps.
